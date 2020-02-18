@@ -1,0 +1,10 @@
+rootProject.name = 'just_a_game'
+
+include ':inspiration', ':base_spring_boot_project'
+ProjectDescriptor inspiration = project(':inspiration')
+inspiration.projectDir = new File('../inspiration')
+inspiration.buildFileName = 'export.gradle'
+
+ProjectDescriptor base_spring_boot_project = project(':base_spring_boot_project')
+base_spring_boot_project.projectDir = new File('../base_spring_boot_project')
+base_spring_boot_project.buildFileName = 'export.gradle'
