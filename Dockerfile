@@ -7,11 +7,11 @@
 FROM alpine/git:v2.24.3 as gitImage
 
 WORKDIR /home/gitProjects
-RUN mkdir ./base_spring_boot_project
-RUN git clone https://github.com/mokhovav/base_spring_boot_project.git ./base_spring_boot_project
+# RUN mkdir ./base_spring_boot_project
+# RUN git clone https://github.com/mokhovav/base_spring_boot_project.git ./base_spring_boot_project
 
-RUN mkdir ./inspiration
-RUN git clone https://github.com/mokhovav/base_spring_boot_project.git ./inspiration
+# RUN mkdir ./inspiration
+# RUN git clone https://github.com/mokhovav/base_spring_boot_project.git ./inspiration
 
 ###################################################################################################
 # defines the basic image for starting the container building process
@@ -56,7 +56,7 @@ RUN ./gradlew --build-cache --no-daemon build
 FROM openjdk:11.0.4-jre-slim
 # ENV command is used to set environment variables (one or many).
 # These variables look as follows “key = value” and they are available inside the container for scripts and various applications
-ENV name=inspiration-0.1
+ENV name=just_a_game-0.1
 
 WORKDIR /srv/${name}
 

@@ -1,0 +1,20 @@
+name: Docker Image CI
+on: [push]
+jobs:
+  build:
+    #The type of machine to run the job on. The machine can be either a GitHub-hosted runner, or a self-hosted runner
+    #./.github/scripts/CRT.sh
+    #- name: Login
+    #        run: docker --tls --tlscacert string --tlscert string login --tlskey string -u ${{ secrets.USERNAME }} -p ${{ secrets.PASSWORD }} 78.47.167.60:5000
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag just_a_game
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: mokhovav/just_a_game:just_a_game
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}

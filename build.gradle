@@ -21,17 +21,18 @@ configurations {
 }
 /* A SourceSet is a collection of java source files and additional resource files
  that are compiled and assembled together to be executed. */
+
 sourceSets {
     main {
         java {
-            srcDir "..\\inspiration\\src\\main\\java"
-            srcDir "..\\base_spring_boot_project\\src\\main\\java"
+            srcDir "\\inspiration\\src\\main\\java"
+            srcDir "\\base_spring_boot_project\\src\\main\\java"
         }
     }
     test {
         java {
-            srcDir "..\\inspiration\\src\\test\\java"
-            srcDir "..\\base_spring_boot_project\\src\\test\\java"
+            srcDir "\\inspiration\\src\\test\\java"
+            srcDir "\\base_spring_boot_project\\src\\test\\java"
         }
     }
 }

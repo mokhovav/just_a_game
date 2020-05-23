@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="">
 <head>
-    <title>Draw a blue rectangle</title>
+    <title>Games</title>
     <script src="js/boardArea.js"></script>
     <script src="js/inspiration.js"></script>
     <script src="js/WEBGL.js"></script>
