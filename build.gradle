@@ -19,26 +19,31 @@ configurations {
         extendsFrom developmentOnly
     }
 }
-
 /* A SourceSet is a collection of java source files and additional resource files
  that are compiled and assembled together to be executed. */
 sourceSets {
     main {
         java {
-            srcDir "$rootDir.\\..\\inspiration\\src\\main\\java"
-            srcDir "$rootDir\\..\\base_spring_boot_project\\src\\main\\java"
+            srcDir "..\\inspiration\\src\\main\\java"
+            srcDir "..\\base_spring_boot_project\\src\\main\\java"
         }
     }
     test {
         java {
-            srcDir "$rootDir\\..\\inspiration\\src\\test\\java"
-            srcDir "$rootDir\\..\\base_spring_boot_project\\src\\test\\java"
+            srcDir "..\\inspiration\\src\\test\\java"
+            srcDir "..\\base_spring_boot_project\\src\\test\\java"
         }
     }
 }
 
+springBoot {
+    mainClassName = "com.mokhovav.justAGame.JustAGame"
+}
+
 dependencies {
+    implementation 'com.mokhovav:base_spring_boot_project'
     compile project(':base_spring_boot_project')
+    implementation 'com.mokhovav:inspiration'
     compile project(':inspiration')
     compile group: 'org.springframework', name: 'spring-aspects', version: '3.2.4.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-freemarker'
