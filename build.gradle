@@ -25,14 +25,14 @@ configurations {
 sourceSets {
     main {
         java {
-            srcDir "\\inspiration\\src\\main\\java"
-            srcDir "\\base_spring_boot_project\\src\\main\\java"
+            srcDir "..\\inspiration\\src\\main\\java"
+            srcDir "..\\base_spring_boot_project\\src\\main\\java"
         }
     }
     test {
         java {
-            srcDir "\\inspiration\\src\\test\\java"
-            srcDir "\\base_spring_boot_project\\src\\test\\java"
+            srcDir "..\\inspiration\\src\\test\\java"
+            srcDir "..\\base_spring_boot_project\\src\\test\\java"
         }
     }
 }
@@ -42,9 +42,7 @@ springBoot {
 }
 
 dependencies {
-    implementation 'com.mokhovav:base_spring_boot_project'
     compile project(':base_spring_boot_project')
-    implementation 'com.mokhovav:inspiration'
     compile project(':inspiration')
     compile group: 'org.springframework', name: 'spring-aspects', version: '3.2.4.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-freemarker'

@@ -4,14 +4,13 @@
 # author
 # MAINTAINER mohovav
 ###################################################################################################
+
 FROM alpine/git:v2.24.3 as gitImage
+WORKDIR /home/gitProjects/base_spring_boot_project
+RUN git clone https://github.com/mokhovav/base_spring_boot_project.git ./
 
-WORKDIR /home/gitProjects
-# RUN mkdir ./base_spring_boot_project
-# RUN git clone https://github.com/mokhovav/base_spring_boot_project.git ./base_spring_boot_project
-
-# RUN mkdir ./inspiration
-# RUN git clone https://github.com/mokhovav/base_spring_boot_project.git ./inspiration
+WORKDIR /home/gitProjects/inspiration
+RUN git clone https://github.com/mokhovav/inspiration ./
 
 ###################################################################################################
 # defines the basic image for starting the container building process
@@ -40,7 +39,7 @@ RUN ./mainproject/gradlew --build-cache --no-daemon
 
 # copy all sources and build the project
 COPY ./ ./mainproject
-COPY --from=gitImage /home/gitProjects .
+COPY --from=gitImage /home/gitProjects/ ./
 # copy hibernate.xml from production
 #COPY ./src/main/resources/production/ ./src/main/resources/
 # clean package - delete of all artifacts created during the assembly process
@@ -85,4 +84,6 @@ CMD java ${JAVA_OPTS} -jar ${name}.jar
 
 # VOLUME - this command is used to organize access of your container to the directory on the host (the same as mounting the directory)
 # Command syntax: VOLUME ["/ dir_1", "/ dir2" ...]
+# RUN sleep 100000
+# docker exec -it $id bash
 ###################################################################################################
