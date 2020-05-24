@@ -1,6 +1,0 @@
-[submodule "base_spring_boot_project"]
-	path = base_spring_boot_project
-	url = https://github.com/mokhovav/base_spring_boot_project
-[submodule "inspiration"]
-	path = inspiration
-	url = https://github.com/mokhovav/inspiration
