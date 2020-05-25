@@ -69,8 +69,8 @@ public class LittleCircuit extends Board {
             diceList.clear();
             diceList = Arrays.asList(diceService.createSimpleDice("first",6));
 
-            boardService.convertToFile(this,"D:\\javaProjects\\just_a_game\\src\\main\\resources\\littleCircuit.map");
-            //Board board = boardService.getBoardFromFile("D:\\javaProjects\\just_a_game\\src\\main\\resources\\littleCircuit.map");
+            boardService.convertToFile(this,".\\littleCircuit.map");
+            //Board board = boardService.getBoardFromFile("\\littleCircuit.map");
             //this.fieldList = board.getFieldList();
             //this.linkList = board.getLinkList();
             //this.itemList = board.getItemList();

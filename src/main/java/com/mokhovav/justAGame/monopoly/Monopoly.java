@@ -64,8 +64,8 @@ public class Monopoly extends Board {
             fortune.put(102, "Be generous! Buy or auction this site, then give all other players 20K. Use immediately");
             fortune.put(103, "Ride a luxury limousine. Buy or auction this site, then go to the \"Go!\". Use immediately");
 
-            boardService.convertToFile(this,"D:\\javaProjects\\just_a_game\\src\\main\\resources\\Monopoly.map");
-            boardService.getBoardFromFile("D:\\javaProjects\\just_a_game\\src\\main\\resources\\Monopoly.map");
+            boardService.convertToFile(this,".\\maps\\Monopoly.map");
+            boardService.getBoardFromFile(".\\Monopoly.map");
 
         }catch (ValidException | IOException e){
             logger.debug("Error in Monopoly: " + e.getMessage());

@@ -41,7 +41,7 @@ public class Chess extends Board {
                 i++;
             }
             //linkList = linkService.createRectangleLinks(fieldList,"",8,6);
-            boardService.convertToFile(this,"D:\\javaProjects\\just_a_game\\src\\main\\resources\\Chess.map");
+            boardService.convertToFile(this,".\\Chess.map");
 
         }catch (ValidException | IOException e){
             logger.debug("Error in Chess: " + e.getMessage());

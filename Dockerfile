@@ -84,6 +84,8 @@ CMD java ${JAVA_OPTS} -jar ${name}.jar
 
 # VOLUME - this command is used to organize access of your container to the directory on the host (the same as mounting the directory)
 # Command syntax: VOLUME ["/ dir_1", "/ dir2" ...]
+
+# This command allows you to pause the image assembly process.
 # RUN sleep 100000
 # docker exec -it $id bash
 ###################################################################################################

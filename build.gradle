@@ -25,14 +25,21 @@ configurations {
 sourceSets {
     main {
         java {
-            srcDir "..\\inspiration\\src\\main\\java"
-            srcDir "..\\base_spring_boot_project\\src\\main\\java"
+            srcDir ("..\\base_spring_boot_project\\src\\main\\java")
+            srcDir ("..\\inspiration\\src\\main\\java")
+        }
+        resources {
+            srcDir ("..\\base_spring_boot_project\\src\\main\\resources")
+            srcDir ("..\\inspiration\\src\\main\\resources")
         }
     }
     test {
         java {
-            srcDir "..\\inspiration\\src\\test\\java"
-            srcDir "..\\base_spring_boot_project\\src\\test\\java"
+            srcDir ("..\\base_spring_boot_project\\src\\test\\java")
+            srcDir ("..\\inspiration\\src\\test\\java")
+        }
+        resources {
+            srcDir ("..\\inspiration\\src\\main\\resources")
         }
     }
 }
