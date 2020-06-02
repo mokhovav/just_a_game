@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="">
-<head>
-    <title>Games</title>
+<#import "parts/projectPage.ftlh" as common>
+
+<@common.head title = "Games">
+    <script src="js/base.js"></script>
     <script src="js/boardArea.js"></script>
     <script src="js/inspiration.js"></script>
     <script src="js/WEBGL.js"></script>
+</@common.head>
 
-</head>
-
-<body>
+<@common.body navBarTitle = "justAGame">
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
     Little Circuit game:
     <div>
@@ -52,6 +51,7 @@
             Please use a browser that supports "canvas"
         </canvas>
     </div>
+    <input type="hidden" id="csrf_token" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     <script>
         ctx1 = new Inspiration.Context("boardArea");
         if (ctx1.getContext() != null) boardInit(ctx1);
@@ -67,5 +67,4 @@
 
     <p id="demo2"></p>
     <p id="demo"></p>
-</body>
-</html>
+</@common.body>

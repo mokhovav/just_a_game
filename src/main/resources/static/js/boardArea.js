@@ -24,11 +24,11 @@ function littleCircuitInit (context) {
 #6497b1    (100,151,177)
 #b3cde0    (179,205,224)
 */
-    Inspiration.sendPostRequest(context,"/test","littleCircuit",littleCircuitUpdate);
+    Base.sendPostRequest(context,"/test","littleCircuit",littleCircuitUpdate);
 }
 
 function littleCircuitUpdate(context, text) {
-    let board = Inspiration.convertDataToObject(text);
+    let board = Base.convertDataToObject(text);
     document.getElementById("dice").innerHTML = board.MESSAGES.dice;
     Inspiration.drawRectangle(context,0,0,1600, 250,"1,31,75",1.0);
 
@@ -60,7 +60,7 @@ function littleCircuitUpdate(context, text) {
 }
 
 function throwADie(context){
-    Inspiration.sendPostRequest(context, "/roll","dice", setDice)
+    Base.sendPostRequest(context, "/roll","dice", setDice)
 }
 
 function setDice(context, text){
@@ -68,23 +68,23 @@ function setDice(context, text){
 }
 
 function newGame(context){
-    Inspiration.sendPostRequest(context, "/roll","newGame", setNewGame)
+    Base.sendPostRequest(context, "/roll","newGame", setNewGame)
 }
 
 function setNewGame(context, text){
-    Inspiration.sendPostRequest(context,"/test","littleCircuit",littleCircuitUpdate);
+    Base.sendPostRequest(context,"/test","littleCircuit",littleCircuitUpdate);
 }
 /*****************************************************************************/
 
 /*****************************************************************************/
 // Monopoly
 function MonopolyInit (context) {
-    Inspiration.sendPostRequest(context,"/test","Monopoly",MonopolyUpdate);
+    Base.sendPostRequest(context,"/test","Monopoly",MonopolyUpdate);
 }
 
 function MonopolyUpdate(context, text) {
 
-    let board = Inspiration.convertDataToObject(text);
+    let board = Base.convertDataToObject(text);
     document.getElementById("dices").innerHTML = board.MESSAGES.dice;
     Inspiration.drawLinks(context, board,"black",20);
     Inspiration.drawRectangles(context, board, 80, 80);
@@ -93,7 +93,7 @@ function MonopolyUpdate(context, text) {
 }
 
 function throwMonopolyDices(context){
-    Inspiration.sendPostRequest(context, "/roll","dices", setDices)
+    Base.sendPostRequest(context, "/roll","dices", setDices)
 }
 
 function setDices(context, text){
@@ -105,11 +105,11 @@ function setDices(context, text){
 /*****************************************************************************/
 // Chess
 function ChessInit(context) {
-    Inspiration.sendPostRequest(context,"/test","Chess",ChessUpdate);
+    Base.sendPostRequest(context,"/test","Chess",ChessUpdate);
 }
 
 function ChessUpdate(context, text) {
-    let board = Inspiration.convertDataToObject(text);
+    let board = Base.convertDataToObject(text);
     Inspiration.drawRectangle(context,0,0,900, 900,"maroon",1.0);
     Inspiration.drawLinks(context, board,"64,128,64",10);
     Inspiration.drawRectangles(context, board, 80, 80)

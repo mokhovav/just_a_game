@@ -1,7 +1,7 @@
 package com.mokhovav.justAGame.monopoly;
 
 import com.mokhovav.base_spring_boot_project.annotations.Tracking;
-import com.mokhovav.base_spring_boot_project.exception.ValidException;
+import com.mokhovav.base_spring_boot_project.exceptions.ValidException;
 import com.mokhovav.inspiration.board.Board;
 import com.mokhovav.inspiration.board.BoardService;
 import com.mokhovav.inspiration.dice.DiceService;

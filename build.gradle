@@ -1,23 +1,15 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.4.RELEASE'
+    id 'org.springframework.boot' version '2.3.0.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
 }
 
 group 'com.mokhovav'
 version '0.1'
-
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-}
-
-configurations {
-    developmentOnly
-    runtimeClasspath {
-        extendsFrom developmentOnly
-    }
 }
 /* A SourceSet is a collection of java source files and additional resource files
  that are compiled and assembled together to be executed. */
@@ -51,11 +43,21 @@ springBoot {
 dependencies {
     compile project(':base_spring_boot_project')
     compile project(':inspiration')
-    compile group: 'org.springframework', name: 'spring-aspects', version: '3.2.4.RELEASE'
-    implementation 'org.springframework.boot:spring-boot-starter-freemarker'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
+    implementation 'org.springframework:spring-aspects'
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    implementation 'org.springframework.security:spring-security-crypto'
+
+    implementation 'org.hibernate:hibernate-core'
+
+    implementation 'javax.validation:validation-api'
+
+    implementation 'org.postgresql:postgresql'
 
     testCompile group: 'junit', name: 'junit', version: '4.13'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
