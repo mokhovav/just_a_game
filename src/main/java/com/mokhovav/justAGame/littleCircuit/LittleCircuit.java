@@ -9,6 +9,7 @@ import com.mokhovav.inspiration.field.Field;
 import com.mokhovav.inspiration.field.FieldService;
 import com.mokhovav.inspiration.item.Item;
 import com.mokhovav.inspiration.link.LinkService;
+import com.mokhovav.justAGame.gamesQueues.GameQueue;
 import org.slf4j.Logger;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -18,11 +19,15 @@ import java.util.Arrays;
 
 @Component
 @Lazy
-public class LittleCircuit extends Board {
+public class LittleCircuit extends Board{
+    //private static GameQueue gameQueue;
+    //private final GameQueue gameQueueAutowired;
 
     public LittleCircuit(FieldService fieldService, BoardService boardService, LinkService linkService, DiceService diceService, Logger logger) {
         super(fieldService, boardService, linkService, diceService, logger);
+        //this.gameQueueAutowired = gameQueueAutowired;
         createBoard();
+        //this.gameQueue = gameQueueAutowired;
     }
 
     @Tracking
@@ -81,4 +86,8 @@ public class LittleCircuit extends Board {
         }
         return;
     }
+
+    /*public static GameQueue getGameQueue() {
+        return gameQueue;
+    }/**/
 }

@@ -54,8 +54,6 @@ function littleCircuitUpdate(context, text) {
         ctx.fillStyle = "#FFF";
         ctx.font = "italic 10pt Arial";
         ctx.fillText(board.ITEMS[i].name, 60, 145 + i*25);
-
-
     }
 }
 

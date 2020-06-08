@@ -19,7 +19,7 @@
                         </div>
                         <div class="form-group">
                             <label for="pwd">Password</label>
-                            <input type="text" class="form-control" name="pwd" placeholder="Enter password">
+                            <input type="password" class="form-control" name="pwd" placeholder="Enter password">
                         </div>
                         <div class="checkbox">
                             <label><input type="checkbox" value="" checked name="rememberUser"> Remember me</label>

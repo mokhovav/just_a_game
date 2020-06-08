@@ -1,5 +1,7 @@
 package com.mokhovav.justAGame;
 
+import com.mokhovav.justAGame.games.Game;
+import com.mokhovav.justAGame.games.GameService;
 import com.mokhovav.justAGame.authentication.authority.Authority;
 import com.mokhovav.justAGame.authentication.authority.AuthorityService;
 import com.mokhovav.justAGame.authentication.user.User;
@@ -16,11 +18,13 @@ public class JustAGame {
     private final PasswordEncoder passwordEncoder;
     private final AuthorityService authorityService;
     private final UserService userService;
+    private final GameService gameService;
 
-    public JustAGame(PasswordEncoder passwordEncoder, AuthorityService authorityService, UserService userService) {
+    public JustAGame(PasswordEncoder passwordEncoder, AuthorityService authorityService, UserService userService, GameService gameService) {
         this.passwordEncoder = passwordEncoder;
         this.authorityService = authorityService;
         this.userService = userService;
+        this.gameService = gameService;
     }
 
     public static void main(String[] args) {
@@ -41,6 +45,12 @@ public class JustAGame {
         }
         try {
             userService.save(new User("admin", passwordEncoder.encode("admin")));
+        } catch (Exception e) {
+            System.out.println("PostConstruct: " + e.getMessage());
+        }
+
+        try {
+            gameService.save(new Game("littleCircuit", 4, 10000, true));
         } catch (Exception e) {
             System.out.println("PostConstruct: " + e.getMessage());
         }

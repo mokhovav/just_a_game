@@ -2,6 +2,7 @@
 
 <@common.head title = "Games">
     <script src="js/base.js"></script>
+    <script src="js/sessionFactory.js"></script>
     <script src="js/boardArea.js"></script>
     <script src="js/inspiration.js"></script>
     <script src="js/WEBGL.js"></script>
@@ -10,6 +11,11 @@
 <@common.body navBarTitle = "justAGame">
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
     Little Circuit game:
+    <div>
+        <button name="Play" onclick="wantToPlay(ctx3);">PLAY</button>
+        <p id="playInfo">0</p>
+    </div>
+
     <div>
         <button name="NewGame" onclick="newGame(ctx3);">NewGame</button>
     </div>

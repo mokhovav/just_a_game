@@ -21,6 +21,19 @@ services:
     #volumes:
     #  - ./data/postgres:/var/lib/postgresql/data
 
+  mongodb:
+    image: mongo:latest
+    container_name: "mongodb"
+    command: --smallfiles
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: gamesdb
+      MONGO_INITDB_ROOT_USERNAME: admindb
+      MONGO_INITDB_ROOT_PASSWORD: admindb
+    ports:
+      - 6545:27017
+
+
  #service name
   adminer:
     image: adminer
