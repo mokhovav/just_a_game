@@ -13,7 +13,7 @@ public class MainController {
         this.logger = logger;
     }
 
-    @GetMapping("index")
+    @GetMapping
     @Tracking
     public String index(){
         return "index";

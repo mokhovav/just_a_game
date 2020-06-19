@@ -24,7 +24,7 @@
                         <div class="checkbox">
                             <label><input type="checkbox" value="" checked name="rememberUser"> Remember me</label>
                         </div>
-                        <button class="btn btn-primary" type="submit" name="baseSubmit">Login</button>
+                        <button class="btn btn-primary" type="submit" name="loginSubmit">Login</button>
 
                         <div class="col-form-label" id="message"><#if error??>${error}</#if></div>
 
@@ -34,16 +34,15 @@
                                     <script>
                                         $(document).ready(function(){
                                             // Show the Modal on load
-                                            //$("#loginModal").on('show.bs.modal', function (event) {
-                                            //    $("#message").text("<#if error??> ${error}</#if>");
-                                            //});
+                                            $("#loginModal").on('show.bs.modal', function (event) {
+                                                $("#message").text("<#if error??> ${error}</#if>");
+                                            });
                                             $("#loginModal").modal("show");
                                         });
                                     </script>
                                 </#if>
                             </#if>
                         </#if>
-
                         <input type="hidden" id="csrf_token" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     </form>
                 </div>

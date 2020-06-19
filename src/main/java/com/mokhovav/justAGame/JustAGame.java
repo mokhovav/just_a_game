@@ -100,8 +100,8 @@ public class JustAGame {
         }
 
         //mongoTemplate.dropCollection("Games");
-        BoardFileData boardFileData = boardService.convertToBoardFileData(littleCircuit);
-        GameSession gameSession = new GameSession("Andrey", "M", boardFileData);
-        mongoTemplate.insert(gameSession, "Games");
+        //BoardFileData boardFileData = boardService.convertToBoardFileData(littleCircuit);
+        //GameSession gameSession = new GameSession("Andrey", "M", boardFileData);
+        //mongoTemplate.insert(gameSession, "Games");
     }
 }

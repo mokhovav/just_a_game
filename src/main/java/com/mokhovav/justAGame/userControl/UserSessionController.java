@@ -2,14 +2,17 @@ package com.mokhovav.justAGame.userControl;
 
 import com.mokhovav.base_spring_boot_project.annotations.Tracking;
 import com.mokhovav.base_spring_boot_project.exceptions.ValidException;
+import com.mokhovav.inspiration.board.BoardService;
 import com.mokhovav.justAGame.games.Game;
 import com.mokhovav.justAGame.games.GameService;
 import com.mokhovav.justAGame.authentication.user.User;
 import com.mokhovav.justAGame.gamesQueues.GameQueue;
 import com.mokhovav.justAGame.gamesQueues.GameQueueThread;
+import com.mokhovav.justAGame.littleCircuit.LittleCircuit;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.support.ManagedMap;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,17 +32,23 @@ public class UserSessionController {
     private final GameQueue gameQueue;
     private final GameService gameService;
     private final Logger logger;
+    private final MongoTemplate mongoTemplate;
+    private final BoardService boardService;
+    private final LittleCircuit littleCircuit;
 
 
-    public UserSessionController(ApplicationEventPublisher publisher, UserSessionService userSessionService, GameQueue gameQueue, GameService gameService, Logger logger) {
+    public UserSessionController(ApplicationEventPublisher publisher, UserSessionService userSessionService, GameQueue gameQueue, GameService gameService, Logger logger, MongoTemplate mongoTemplate, BoardService boardService, LittleCircuit littleCircuit) {
         this.publisher = publisher;
         this.userSessionService = userSessionService;
         this.gameQueue = gameQueue;
         this.gameService = gameService;
         this.logger = logger;
+        this.mongoTemplate = mongoTemplate;
+        this.boardService = boardService;
+        this.littleCircuit = littleCircuit;
     }
 
-    @PostMapping("/{text}")
+    @PostMapping("{text}")
     @Tracking
     public String startSession(
             @AuthenticationPrincipal User user,
@@ -66,7 +75,7 @@ public class UserSessionController {
                 gameQueue  = this.gameQueue;
                 gameQueue.setGame(game);
                 gameQueueMap.put(text, gameQueue);
-                GameQueueThread gameQueueThread = new GameQueueThread(gameService, logger, userSessionService);
+                GameQueueThread gameQueueThread = new GameQueueThread(gameService, logger, userSessionService, mongoTemplate, boardService, littleCircuit);
                 gameQueueThread.setName(text);
                 gameQueueThreadMap.put(text, gameQueueThread);
                 gameQueueThread.start(gameQueue);

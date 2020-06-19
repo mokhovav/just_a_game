@@ -15,7 +15,7 @@ public class UserSession extends BaseEntity{
     @Column(name = "is_send")
     private boolean isSend;
     @Column (name = "session_id")
-    private Long sessionId;
+    private String sessionId;
 
     public UserSession() {
     }
@@ -50,11 +50,11 @@ public class UserSession extends BaseEntity{
         isSend = send;
     }
 
-    public Long getSessionId() {
+    public String getSessionId() {
         return sessionId;
     }
 
-    public void setSessionId(Long sessionId) {
+    public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
     }
 }

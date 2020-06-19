@@ -8,9 +8,11 @@ import com.mokhovav.inspiration.dice.DiceService;
 import com.mokhovav.inspiration.item.Item;
 import com.mokhovav.inspiration.item.ItemService;
 import com.mokhovav.justAGame.Chess.Chess;
+import com.mokhovav.justAGame.authentication.user.User;
 import com.mokhovav.justAGame.littleCircuit.LittleCircuit;
 import com.mokhovav.justAGame.monopoly.Monopoly;
 import org.slf4j.Logger;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -65,9 +67,15 @@ public class BoardController{
         return null;
     }
 
+
+
+
     @PostMapping("/roll/{text}")
+   // @MessageMapping("/roll/{text}")
+   // @SendTo("/topic/greetings")     // The return value is broadcast to all subscribers of /topic/greetings
     @Tracking
-    public BoardDrawData roll(@PathVariable String text) {
+    public BoardDrawData roll(@AuthenticationPrincipal User user,
+                              @PathVariable String text) {
         try {
             if (text.equals("\"dice\"")) {
                 Dice dice = littleCircuit.getDiceList().get(0);

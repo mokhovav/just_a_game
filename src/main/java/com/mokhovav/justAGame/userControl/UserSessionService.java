@@ -19,7 +19,13 @@ public class UserSessionService {
 
     public void save(User user) throws ValidException {
         UserSession userSession = getByUser(user);
-        if (userSession != null) throw new ValidException("This user is already playing in this game");
+        Status status = userSession.getStatus();
+        if (userSession != null){
+            if (status == Status.PLAYING || status == Status.WAITING) throw new ValidException("This user is already playing in this game");
+            if (status == Status.LOST){
+                throw new ValidException("This user is lost");
+            }
+        }
         userSession = new UserSession(user);
         daoService.save(userSession);
     }
@@ -51,7 +57,7 @@ public class UserSessionService {
         return userSession.getStatus();
     }
 
-    public void setGameSession(User user, Long gameSessionId) throws ValidException {
+    public void setGameSession(User user, String gameSessionId) throws ValidException {
         UserSession userSession = getByUser(user);
         if (userSession == null) throw new ValidException("User sessions not found");
         userSession.setSessionId(gameSessionId);

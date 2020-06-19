@@ -1,16 +1,96 @@
 <#import "parts/projectPage.ftlh" as common>
-
 <@common.head title = "Games">
-    <script src="js/base.js"></script>
-    <script src="js/sessionFactory.js"></script>
-    <script src="js/boardArea.js"></script>
-    <script src="js/inspiration.js"></script>
-    <script src="js/WEBGL.js"></script>
+
 </@common.head>
 
 <@common.body navBarTitle = "justAGame">
-    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    <noscript>
+        <h2 style="color: #ff0000">
+            Seems your browser doesn't support Javascript!
+            Websocket relies on Javascript being enabled.
+            Please enable Javascript and reload this page!
+        </h2>
+    </noscript>
+
+    <script src="js/base.js"></script>
+    <script src="js/boardArea.js"></script>
+    <script src="js/inspiration.js"></script>
+    <script src="js/WEBGL.js"></script>
+    <script src="js/stompWebSocket.js"></script>
+    <script src="js/webSocket.js"></script>
+
+    <div id="main-content" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="connect">Native WebSocket connection:</label>
+                    <div id="webSocketConnect" class="btn btn-default" >Connect</div>
+                    <button id="webSocketDisconnect" class="btn btn-default" type="submit">Disconnect</button>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="webSocketMessage">What is your name?</label>
+                    <input type="text" id="webSocketMessage" class="form-control" placeholder="Your message here...">
+                </div>
+                <button id="webSocketSend" class="btn btn-default" type="submit">Send</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table id="conversation" class="table">
+                    <thead>
+                        <tr>
+                            <th>Messages</th>
+                        </tr>
+                    </thead>
+                    <tbody id="webSocketMessages">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     Little Circuit game:
+
+    <div id="main-content" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="connect">WebSocket connection:</label>
+                        <button id="connect"  class="btn btn-default" type="submit">Connect</button>
+                        <button id="disconnect"  class="btn btn-default" type="submit" disabled="disabled">Disconnect
+                        </button>
+                    </div>
+
+            </div>
+            <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="name">What is your name?</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your name here...">
+                    </div>
+                    <button id="send"  class="btn btn-default" type="submit">Send</button>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table id="conversation" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Greetings</th>
+                    </tr>
+                    </thead>
+                    <tbody id="greetings">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
     <div>
         <button name="Play" onclick="wantToPlay(ctx3);">PLAY</button>
         <p id="playInfo">0</p>
@@ -66,11 +146,10 @@
         ctx2 = new Inspiration.Context("Monopoly");
         if (ctx2.getContext() != null) MonopolyInit(ctx2);
 
-        ctx3 = new Inspiration.Context("LittleCircuit");
-        if (ctx3.getContext() != null) littleCircuitInit(ctx3);
     </script>
 
 
     <p id="demo2"></p>
     <p id="demo"></p>
 </@common.body>
+

@@ -16,15 +16,11 @@ import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory;
 import org.springframework.data.mongodb.core.convert.MappingMongoConverter;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
-import javax.persistence.EntityManagerFactory;
-
 @Configuration
-//@EnableMongoRepositories
 public class MongoConfig extends AbstractMongoClientConfiguration  {
 
     @Value("mongodb://root:toor@localhost:6546")
@@ -58,13 +54,11 @@ public class MongoConfig extends AbstractMongoClientConfiguration  {
                 .codecRegistry(codecRegistry)
                 .build());
 /**/
-
         return MongoClients.create(connectionString);
     }
 
     @Override
     public MongoDatabaseFactory mongoDbFactory() {
-        //return new SimpleMongoClientDatabaseFactory(new ConnectionString("mongodb://localhost:6546/games_db"));
         return new SimpleMongoClientDatabaseFactory(mongoClient(), "games_db");
     }
 

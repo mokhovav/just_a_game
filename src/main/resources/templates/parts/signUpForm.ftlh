@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-form-label" id="message"><#if error??> ${error}</#if></div>
 
-                        <button class="btn btn-primary" type="submit" name="baseSubmit">Submit</button>
+                        <button class="btn btn-primary" type="submit" name="signUpSubmit">Submit</button>
 
                         <#if action?? >
                             <#if action == "signUp">
