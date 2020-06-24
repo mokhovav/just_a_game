@@ -6,6 +6,7 @@ import com.mokhovav.base_spring_boot_project.baseClasses.BaseEntity;
 
 import com.mokhovav.justAGame.authentication.authority.Authority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -14,6 +15,7 @@ import java.util.Set;
 
 @MappedSuperclass
 public class UserData extends BaseEntity implements UserDetails {
+
     public UserData() {
     }
     @Column(name = "name")

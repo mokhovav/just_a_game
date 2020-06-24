@@ -84,7 +84,7 @@ public class JustAGame {
         }
 
         try {
-            gameService.save(new Game("littleCircuit", 4, 10000, true));
+            gameService.save(new Game("littleCircuit", 4, 10000, true, 15000));
         } catch (Exception e) {
             System.out.println("PostConstruct: " + e.getMessage());
         }
@@ -100,6 +100,8 @@ public class JustAGame {
         }
 
         //mongoTemplate.dropCollection("Games");
+        //mongoTemplate.dropCollection("game_sessions");
+
         //BoardFileData boardFileData = boardService.convertToBoardFileData(littleCircuit);
         //GameSession gameSession = new GameSession("Andrey", "M", boardFileData);
         //mongoTemplate.insert(gameSession, "Games");

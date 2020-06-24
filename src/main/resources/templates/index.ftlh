@@ -1,6 +1,6 @@
 <#import "parts/projectPage.ftlh" as common>
 <@common.head title = "Games">
-
+    <link rel="stylesheet" href="css/index.css">
 </@common.head>
 
 <@common.body navBarTitle = "justAGame">
@@ -17,87 +17,12 @@
     <script src="js/inspiration.js"></script>
     <script src="js/WEBGL.js"></script>
     <script src="js/stompWebSocket.js"></script>
-    <script src="js/webSocket.js"></script>
-
-    <div id="main-content" class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="connect">Native WebSocket connection:</label>
-                    <div id="webSocketConnect" class="btn btn-default" >Connect</div>
-                    <button id="webSocketDisconnect" class="btn btn-default" type="submit">Disconnect</button>
-                </div>
-
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="webSocketMessage">What is your name?</label>
-                    <input type="text" id="webSocketMessage" class="form-control" placeholder="Your message here...">
-                </div>
-                <button id="webSocketSend" class="btn btn-default" type="submit">Send</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table id="conversation" class="table">
-                    <thead>
-                        <tr>
-                            <th>Messages</th>
-                        </tr>
-                    </thead>
-                    <tbody id="webSocketMessages">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    <script src="js/gameController.js"></script>
 
     Little Circuit game:
-
-    <div id="main-content" class="container">
-        <div class="row">
-            <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="connect">WebSocket connection:</label>
-                        <button id="connect"  class="btn btn-default" type="submit">Connect</button>
-                        <button id="disconnect"  class="btn btn-default" type="submit" disabled="disabled">Disconnect
-                        </button>
-                    </div>
-
-            </div>
-            <div class="col-md-6">
-
-                    <div class="form-group">
-                        <label for="name">What is your name?</label>
-                        <input type="text" id="name" class="form-control" placeholder="Your name here...">
-                    </div>
-                    <button id="send"  class="btn btn-default" type="submit">Send</button>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table id="conversation" class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>Greetings</th>
-                    </tr>
-                    </thead>
-                    <tbody id="greetings">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-
     <div>
-        <button name="Play" onclick="wantToPlay(ctx3);">PLAY</button>
-        <p id="playInfo">0</p>
-    </div>
-
-    <div>
-        <button name="NewGame" onclick="newGame(ctx3);">NewGame</button>
+        <button id="playLittleCircuit">PLAY</button>
+        <button id="exitLittleCircuit">Exit</button>
     </div>
 
     <div>
@@ -107,8 +32,37 @@
     </div>
 
     <div>
-        <button name="throwADie" onclick="throwADie(ctx3);">Dice</button>
-        <p id="dice">0</p>
+        <button id="throwADice">Dice</button>
+        <p id="diceInfo">0</p>
+    </div>
+
+    <div id="main-content" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="table-responsive" >
+                    <table class="table table-striped table-hover table-condensed table-sm">
+                        <thead>
+                        <tr>
+                            <th width="25%">Messages</th>
+                        </tr>
+                        </thead>
+                    </table>
+
+                    <div class="scrollable bodyContainer" id="messagesTable">
+                        <table class="table table-hover table-striped table-condensed table-scrollable table-sm">
+                            <tbody id="littleCircuitInfo">
+                            <!-- add rows here, specifying same widths as in header, at least on one row -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="table table-hover table-striped table-condensed">
+                        <tfoot>
+                        <!-- add your footer here... -->
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div>
@@ -139,15 +93,16 @@
     </div>
     <input type="hidden" id="csrf_token" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     <script>
+        let littleCircuitContext = new Inspiration.Context("LittleCircuit");
+
         ctx1 = new Inspiration.Context("boardArea");
         if (ctx1.getContext() != null) boardInit(ctx1);
+
         WEBGLInit("webgl");
 
         ctx2 = new Inspiration.Context("Monopoly");
         if (ctx2.getContext() != null) MonopolyInit(ctx2);
-
     </script>
-
 
     <p id="demo2"></p>
     <p id="demo"></p>

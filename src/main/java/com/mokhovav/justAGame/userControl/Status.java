@@ -4,5 +4,7 @@ public enum Status {
     FREE,
     WAITING,
     PLAYING,
+    WAITSOCKET,
+    RELOAD,
     LOST
 }

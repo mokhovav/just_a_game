@@ -54,14 +54,14 @@ public class BoardController{
     @PostMapping("/test/{text}")
     @Tracking
     public BoardDrawData boardPostRequest(@PathVariable String text) {
-        if (text.equals("\"littleCircuit\"")) {
+        if (text.equals("littleCircuit")) {
             step = 0;
             return boardService.convertToBoardDrawData(littleCircuit, "position");
         }
-        if (text.equals("\"Monopoly\"")) {
+        if (text.equals("Monopoly")) {
             return boardService.convertToBoardDrawData(monopoly, "position");
         }
-        if (text.equals("\"Chess\"")) {
+        if (text.equals("Chess")) {
             return boardService.convertToBoardDrawData(chess, "position");
         }
         return null;
@@ -77,7 +77,7 @@ public class BoardController{
     public BoardDrawData roll(@AuthenticationPrincipal User user,
                               @PathVariable String text) {
         try {
-            if (text.equals("\"dice\"")) {
+            if (text.equals("dice")) {
                 Dice dice = littleCircuit.getDiceList().get(0);
                 int rollValue = diceService.rollTheDice(dice);
                 logger.debug("roll value = " + rollValue);
@@ -113,7 +113,7 @@ public class BoardController{
                 return boardDrawData;
             }
 
-            if (text.equals("\"dices\"")) {
+            if (text.equals("dices")) {
                 Dice dice1 = monopoly.getDiceList().get(0);
                 Dice dice2 = monopoly.getDiceList().get(1);
                 int rollValue = diceService.rollTheDice(dice1) + diceService.rollTheDice(dice2);
@@ -124,7 +124,7 @@ public class BoardController{
                 return boardDrawData;
             }
 
-            if (text.equals("\"newGame\"")) {
+            if (text.equals("newGame")) {
                 step = 0;
                 finisher = null;
                 littleCircuit.createBoard();

@@ -24,15 +24,15 @@ function littleCircuitInit (context) {
 #6497b1    (100,151,177)
 #b3cde0    (179,205,224)
 */
-    Base.sendPostRequest(context,"/test","littleCircuit",littleCircuitUpdate);
+    Base.sendPostRequestContext(context,"/test","littleCircuit",littleCircuitUpdate);
 }
 
 function littleCircuitUpdate(context, text) {
     let board = Base.convertDataToObject(text);
-    document.getElementById("dice").innerHTML = board.MESSAGES.dice;
+
+    $('#diceInfo').text(board.MESSAGES.dice);
+
     Inspiration.drawRectangle(context,0,0,1600, 250,"1,31,75",1.0);
-
-
     Inspiration.drawLinks(context, board,"64,128,64",40);
     Inspiration.drawCircles(context, board, 20);
 
@@ -58,7 +58,7 @@ function littleCircuitUpdate(context, text) {
 }
 
 function throwADie(context){
-    Base.sendPostRequest(context, "/roll","dice", setDice)
+    Base.sendPostRequestContext(context, "/roll","dice", setDice)
 }
 
 function setDice(context, text){
@@ -66,18 +66,18 @@ function setDice(context, text){
 }
 
 function newGame(context){
-    Base.sendPostRequest(context, "/roll","newGame", setNewGame)
+    Base.sendPostRequestContext(context, "/roll","newGame", setNewGame)
 }
 
 function setNewGame(context, text){
-    Base.sendPostRequest(context,"/test","littleCircuit",littleCircuitUpdate);
+    Base.sendPostRequestContext(context,"/test",text,littleCircuitUpdate);
 }
 /*****************************************************************************/
 
 /*****************************************************************************/
 // Monopoly
 function MonopolyInit (context) {
-    Base.sendPostRequest(context,"/test","Monopoly",MonopolyUpdate);
+    Base.sendPostRequestContext(context,"/test","Monopoly",MonopolyUpdate);
 }
 
 function MonopolyUpdate(context, text) {
@@ -91,7 +91,7 @@ function MonopolyUpdate(context, text) {
 }
 
 function throwMonopolyDices(context){
-    Base.sendPostRequest(context, "/roll","dices", setDices)
+    Base.sendPostRequestContext(context, "/roll","dices", setDices)
 }
 
 function setDices(context, text){
@@ -103,7 +103,7 @@ function setDices(context, text){
 /*****************************************************************************/
 // Chess
 function ChessInit(context) {
-    Base.sendPostRequest(context,"/test","Chess",ChessUpdate);
+    Base.sendPostRequestContext(context,"/test","Chess",ChessUpdate);
 }
 
 function ChessUpdate(context, text) {

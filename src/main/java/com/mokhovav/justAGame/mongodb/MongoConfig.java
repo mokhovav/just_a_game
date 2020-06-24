@@ -69,4 +69,6 @@ public class MongoConfig extends AbstractMongoClientConfiguration  {
         MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory());
         return mongoTemplate;
     }
+
+
 }

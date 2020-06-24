@@ -4,9 +4,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class GameMessage {
-    private String message;
     private String command;
-    private String text;
+    private String message;
 
     public GameMessage() {
     }
@@ -25,13 +24,5 @@ public class GameMessage {
 
     public void setCommand(String command) {
         this.command = command;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 }

@@ -1,5 +1,6 @@
-package com.mokhovav.justAGame.webSockets.gameMessage;
+package com.mokhovav.justAGame.webSockets;
 
+import com.mokhovav.justAGame.webSockets.gameMessage.GameMessageHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.client.standard.WebSocketContainerFactoryBean;
@@ -10,10 +11,18 @@ import org.springframework.web.socket.server.support.HttpSessionHandshakeInterce
 
 @Configuration
 @EnableWebSocket
-public class GameMessageConfig implements WebSocketConfigurer {
+public class GameSocketsConfig implements WebSocketConfigurer {
+
+    private final GameMessageHandler gameMessageHandler;
+
+    public GameSocketsConfig(GameMessageHandler gameMessageHandler) {
+        this.gameMessageHandler = gameMessageHandler;
+    }
+
+
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(new GameMessageHandler(), "/gameMessageHandler")
+        registry.addHandler(gameMessageHandler, "/gameMessageHandler")
                 // An interceptor to copy information from the HTTP session to the "handshake attributes"
                 // map to made available via WebSocketSession.getAttributes()
                 .addInterceptors(new HttpSessionHandshakeInterceptor())
@@ -23,10 +32,10 @@ public class GameMessageConfig implements WebSocketConfigurer {
                 // SockJS URL. http://host:port/{path-to-sockjs-endpoint}/{server-id}/{session-id}/{transport}
     }
 
-    @Bean
+   /* @Bean
     public GameMessageHandler gameMessageHandler(){
-        return new GameMessageHandler();
-    }
+        return new GameMessageHandler(userSessionService);
+    }/**/
 
     @Bean
     public WebSocketContainerFactoryBean createWebSocketContainer() {

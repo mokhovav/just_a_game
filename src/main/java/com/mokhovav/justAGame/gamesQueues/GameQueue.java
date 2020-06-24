@@ -3,6 +3,7 @@ package com.mokhovav.justAGame.gamesQueues;
 import com.mokhovav.base_spring_boot_project.exceptions.ValidException;
 import com.mokhovav.justAGame.authentication.user.User;
 import com.mokhovav.justAGame.games.Game;
+import com.mokhovav.justAGame.userControl.Status;
 import com.mokhovav.justAGame.userControl.UserSessionService;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,6 @@ public class GameQueue {
     }
 
     public void addUser(User user) throws ValidException {
-       userSessionService.save(user);
        waitingList.add(user);
     }
 

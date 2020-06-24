@@ -15,18 +15,22 @@ public class Game extends BaseEntity {
     @Column(name = "max_players")
     private int maxPlayers;
     @Column(name = "waiting_time")
-    private int waitingTime;
+    private long waitingTime;
+    @Column(name = "move_time")
+    private long moveTime;
     @Column(name = "using_bots")
     private boolean usingBots;
+
 
     public Game() {
     }
 
-    public Game(String name, int maxPlayers, int waitingTime, boolean usingBots) {
+    public Game(String name, int maxPlayers, int waitingTime, boolean usingBots, int moveTime) {
         this.name = name;
         this.maxPlayers = maxPlayers;
         this.waitingTime = waitingTime;
         this.usingBots = usingBots;
+        this.moveTime = moveTime;
     }
 
     public String getName() {
@@ -37,11 +41,15 @@ public class Game extends BaseEntity {
         return maxPlayers;
     }
 
-    public int getWaitingTime() {
+    public long getWaitingTime() {
         return waitingTime;
     }
 
     public boolean isUsingBots() {
         return usingBots;
+    }
+
+    public long getMoveTime() {
+        return moveTime;
     }
 }
