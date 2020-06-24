@@ -26,8 +26,8 @@ WORKDIR /home/gradle/projects
 # COPY only supports the basic copying of local files into the container
 # ADD has some features (like local-only tar extraction and remote URL support)
 # "." - current directory
-COPY gradle ./mainproject/gradle
-COPY .gradle ./mainproject/.gradle
+COPY /gradle ./mainproject/gradle
+COPY /.gradle ./mainproject/.gradle
 
 # copy gradlew and fetch all dependencies by switching to offline mode
 COPY gradlew ./mainproject
@@ -35,6 +35,7 @@ COPY gradlew.bat ./mainproject
 RUN chmod -R 777 ./
 # RUN takes the command as an argument and launches it from the image. Unlike CMD, this command is used to build an image.
 # It will stop downloading and installing the gradle every time.
+# RUN sleep 100000
 RUN ./mainproject/gradlew --build-cache --no-daemon
 
 # copy all sources and build the project
@@ -48,6 +49,7 @@ RUN chmod -R 777 ./
 # RUN takes the command as an argument and launches it from the image. Unlike CMD, this command is used to build an image.
 
 WORKDIR /home/gradle/projects/mainproject
+# RUN sleep 1000000
 RUN ./gradlew --build-cache --no-daemon build
 ###################################################################################################
 
