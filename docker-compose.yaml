@@ -8,7 +8,7 @@ version: '3.1'
 # The section in which services will be described begins with 'services'.
 services:
   spring:
-    image: mokhovav/just_a_game
+    image: mokhovav/just_a_game:0.1
     restart: always
     container_name: just_a_game_project
     ports:
@@ -37,19 +37,19 @@ services:
     ports:
       - 6546:27017
 
-  mongo-express:
-    image: mongo-express
-    container_name: mongo-express
-    restart: always
-    ports:
-      - 6547:8081
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: root
-      ME_CONFIG_MONGODB_ADMINPASSWORD: toor
+#  mongo-express:
+#    image: mongo-express
+#    container_name: mongo-express
+#    restart: always
+#    ports:
+#      - 6547:8081
+#    environment:
+#      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+#      ME_CONFIG_MONGODB_ADMINPASSWORD: toor
 
-  adminer:
-    image: adminer
-    restart: always
-    container_name: adminer
-    ports:
-      - 6544:8080
+#  adminer:
+#    image: adminer
+#    restart: always
+#    container_name: adminer
+#    ports:
+#      - 6544:8080

@@ -1,73 +1,310 @@
-2020-06-24 21:12:49 INFO  org.springframework.boot.StartupInfoLogger                                       Starting JustAGameTest on COMPOTIC with PID 10348 (started by Engineer in D:\javaProjects\just_a_game)
-2020-06-24 21:12:49 DEBUG org.springframework.boot.StartupInfoLogger                                       Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020-06-24 21:12:49 INFO  org.springframework.boot.SpringApplication                                       No active profile set, falling back to default profiles: default
-2020-06-24 21:12:50 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate       Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-24 21:12:50 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate       Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2020-06-24 21:12:50 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate       Finished Spring Data repository scanning in 47ms. Found 1 MongoDB repository interfaces.
-2020-06-24 21:12:50 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@23121d3b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-24 21:12:50 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-24 21:12:50 INFO  org.hibernate.Version                                                            HHH000412: Hibernate ORM core version 5.4.15.Final
-2020-06-24 21:12:51 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager           HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-06-24 21:12:51 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2020-06-24 21:12:51 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:6543/authentication]
-2020-06-24 21:12:51 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH10001001: Connection properties: {user=just_a_game_user, password=****}
-2020-06-24 21:12:51 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH10001003: Autocommit mode: false
-2020-06-24 21:12:51 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections HHH000115: Hibernate connection pool size: 20 (min=1)
-2020-06-24 21:12:51 INFO  org.hibernate.dialect.Dialect                                                    HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
-2020-06-24 21:12:52 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@71733251] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2020-06-24 21:12:52 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator      HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-06-24 21:12:52 INFO  com.mongodb.diagnostics.logging.SLF4JLogger                                      Cluster created with settings {hosts=[localhost:6546], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2020-06-24 21:12:52 INFO  com.mongodb.diagnostics.logging.SLF4JLogger                                      Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:6546
-2020-06-24 21:12:52 INFO  com.mongodb.diagnostics.logging.SLF4JLogger                                      Monitor thread successfully connected to server with description ServerDescription{address=localhost:6546, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4209100}
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createFields
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createFields. Start at: 2020-06-24T21:12:52.565 Duration: 0s 4ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createLineLinks
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createLineLinks. Start at: 2020-06-24T21:12:52.570 Duration: 0s 4ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createSimpleDice
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createSimpleDice. Start at: 2020-06-24T21:12:52.576 Duration: 0s 3ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToFile
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T21:12:52.584 Duration: 0s 96ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T21:12:52.681 Duration: 0s 0ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T21:12:52.682 Duration: 0s 0ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T21:12:52.682 Duration: 0s 0ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToFile. Start at: 2020-06-24T21:12:52.580 Duration: 0s 141ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createFields
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createFields. Start at: 2020-06-24T21:12:52.980 Duration: 0s 0ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createCircularLinks
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createCircularLinks. Start at: 2020-06-24T21:12:52.981 Duration: 0s 0ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createSimpleDice
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createSimpleDice. Start at: 2020-06-24T21:12:52.982 Duration: 0s 0ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createSimpleDice
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createSimpleDice. Start at: 2020-06-24T21:12:52.983 Duration: 0s 0ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToFile
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T21:12:52.985 Duration: 0s 0ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToFile. Start at: 2020-06-24T21:12:52.984 Duration: 0s 2ms Value: null
-2020-06-24 21:12:52 DEBUG com.mokhovav.justAGame.monopoly.Monopoly                                         Error in Monopoly: .\maps\Monopoly.map (The system cannot find the path specified)
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToFile
-2020-06-24 21:12:52 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToFile. Start at: 2020-06-24T21:12:52.992 Duration: 0s 2ms Value: null
-2020-06-24 21:12:53 INFO  org.springframework.security.web.DefaultSecurityFilterChain                      Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cec8837, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b892c6, org.springframework.security.web.header.HeaderWriterFilter@46dcc106, org.springframework.security.web.csrf.CsrfFilter@7b5bb442, org.springframework.security.web.authentication.logout.LogoutFilter@17149439, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6c63ffd8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f204e5c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fa5254f, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5451fdee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6af8cb52, org.springframework.security.web.session.SessionManagementFilter@4bdbcc91, org.springframework.security.web.access.ExceptionTranslationFilter@199b3ac1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3990d8e1]
-2020-06-24 21:12:53 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'defaultSockJsTaskScheduler'
-2020-06-24 21:12:53 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'clientInboundChannelExecutor'
-2020-06-24 21:12:53 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'clientOutboundChannelExecutor'
-2020-06-24 21:12:53 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'messageBrokerTaskScheduler'
-2020-06-24 21:12:53 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'brokerChannelExecutor'
-2020-06-24 21:12:53 INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping     Adding welcome page template: index
-2020-06-24 21:12:54 INFO  org.springframework.core.log.CompositeLog                                        Starting...
-2020-06-24 21:12:54 INFO  org.springframework.core.log.CompositeLog                                        BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
-2020-06-24 21:12:54 INFO  org.springframework.core.log.CompositeLog                                        Started.
-2020-06-24 21:12:54 INFO  org.springframework.boot.StartupInfoLogger                                       Started JustAGameTest in 5.085 seconds (JVM running for 5.83)
-2020-06-24 21:12:54 DEBUG com.mokhovav.JustAGameTest                                                       In JustAGameTest
-2020-06-24 21:12:54 INFO  org.springframework.core.log.CompositeLog                                        Stopping...
-2020-06-24 21:12:54 INFO  org.springframework.core.log.CompositeLog                                        BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
-2020-06-24 21:12:54 INFO  org.springframework.core.log.CompositeLog                                        Stopped.
-2020-06-24 21:12:54 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'brokerChannelExecutor'
-2020-06-24 21:12:54 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'messageBrokerTaskScheduler'
-2020-06-24 21:12:54 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'clientOutboundChannelExecutor'
-2020-06-24 21:12:54 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'clientInboundChannelExecutor'
-2020-06-24 21:12:54 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'defaultSockJsTaskScheduler'
-2020-06-24 21:12:54 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:6543/authentication]
+2020-06-24 22:35:09 INFO  org.springframework.boot.StartupInfoLogger                                       Starting JustAGame on COMPOTIC with PID 14604 (D:\javaProjects\just_a_game\build\classes\java\main started by Engineer in D:\javaProjects\just_a_game)
+2020-06-24 22:35:09 DEBUG org.springframework.boot.StartupInfoLogger                                       Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-24 22:35:09 INFO  org.springframework.boot.SpringApplication                                       No active profile set, falling back to default profiles: default
+2020-06-24 22:35:10 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate       Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-24 22:35:10 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate       Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-06-24 22:35:10 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate       Finished Spring Data repository scanning in 65ms. Found 1 MongoDB repository interfaces.
+2020-06-24 22:35:10 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@a098d76' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 22:35:10 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 22:35:11 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer                     Tomcat initialized with port(s): 8080 (http)
+2020-06-24 22:35:11 INFO  org.apache.juli.logging.DirectJDKLog                                             Initializing ProtocolHandler ["http-nio-8080"]
+2020-06-24 22:35:11 INFO  org.apache.juli.logging.DirectJDKLog                                             Starting service [Tomcat]
+2020-06-24 22:35:11 INFO  org.apache.juli.logging.DirectJDKLog                                             Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-24 22:35:11 INFO  org.apache.juli.logging.DirectJDKLog                                             Initializing Spring embedded WebApplicationContext
+2020-06-24 22:35:11 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  Root WebApplicationContext: initialization completed in 1487 ms
+2020-06-24 22:35:11 INFO  org.hibernate.Version                                                            HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-24 22:35:11 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager           HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-24 22:35:11 WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-24 22:35:11 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:6543/authentication]
+2020-06-24 22:35:11 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH10001001: Connection properties: {user=just_a_game_user, password=****}
+2020-06-24 22:35:11 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH10001003: Autocommit mode: false
+2020-06-24 22:35:11 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-24 22:35:11 INFO  org.hibernate.dialect.Dialect                                                    HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2020-06-24 22:35:12 INFO  org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@48860139] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-06-24 22:35:12 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator      HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-24 22:35:12 INFO  com.mongodb.diagnostics.logging.SLF4JLogger                                      Cluster created with settings {hosts=[localhost:6546], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-06-24 22:35:12 INFO  com.mongodb.diagnostics.logging.SLF4JLogger                                      Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:6546
+2020-06-24 22:35:12 INFO  com.mongodb.diagnostics.logging.SLF4JLogger                                      Monitor thread successfully connected to server with description ServerDescription{address=localhost:6546, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3695500}
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createFields
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createFields. Start at: 2020-06-24T22:35:13.064 Duration: 0s 4ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createLineLinks
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createLineLinks. Start at: 2020-06-24T22:35:13.069 Duration: 0s 3ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createSimpleDice
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createSimpleDice. Start at: 2020-06-24T22:35:13.073 Duration: 0s 1ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToFile
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:35:13.078 Duration: 0s 2ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:35:13.080 Duration: 0s 1ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:35:13.081 Duration: 0s 0ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:35:13.081 Duration: 0s 0ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToFile. Start at: 2020-06-24T22:35:13.075 Duration: 0s 53ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createFields
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createFields. Start at: 2020-06-24T22:35:13.377 Duration: 0s 0ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createCircularLinks
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createCircularLinks. Start at: 2020-06-24T22:35:13.378 Duration: 0s 0ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createSimpleDice
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createSimpleDice. Start at: 2020-06-24T22:35:13.378 Duration: 0s 0ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START createSimpleDice
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: createSimpleDice. Start at: 2020-06-24T22:35:13.378 Duration: 0s 0ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToFile
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:35:13.379 Duration: 0s 0ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToFile. Start at: 2020-06-24T22:35:13.379 Duration: 0s 0ms Value: null
+2020-06-24 22:35:13 DEBUG com.mokhovav.justAGame.monopoly.Monopoly                                         Error in Monopoly: .\maps\Monopoly.map (The system cannot find the path specified)
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToFile
+2020-06-24 22:35:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToFile. Start at: 2020-06-24T22:35:13.383 Duration: 0s 2ms Value: null
+2020-06-24 22:35:13 INFO  org.springframework.security.web.DefaultSecurityFilterChain                      Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d0f4ac4, org.springframework.security.web.context.SecurityContextPersistenceFilter@67167f8f, org.springframework.security.web.header.HeaderWriterFilter@6329a5b9, org.springframework.security.web.csrf.CsrfFilter@40696fc6, org.springframework.security.web.authentication.logout.LogoutFilter@62878d7c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1443539, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@733345f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58a9e64d, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@237bdbcb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@544733a4, org.springframework.security.web.session.SessionManagementFilter@4505015b, org.springframework.security.web.access.ExceptionTranslationFilter@9c40f43, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61c0fb12]
+2020-06-24 22:35:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'defaultSockJsTaskScheduler'
+2020-06-24 22:35:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-06-24 22:35:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-06-24 22:35:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-06-24 22:35:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Initializing ExecutorService 'brokerChannelExecutor'
+2020-06-24 22:35:14 INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping     Adding welcome page template: index
+2020-06-24 22:35:14 INFO  org.apache.juli.logging.DirectJDKLog                                             Starting ProtocolHandler ["http-nio-8080"]
+2020-06-24 22:35:14 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer                     Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-24 22:35:14 INFO  org.springframework.core.log.CompositeLog                                        Starting...
+2020-06-24 22:35:14 INFO  org.springframework.core.log.CompositeLog                                        BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-06-24 22:35:14 INFO  org.springframework.core.log.CompositeLog                                        Started.
+2020-06-24 22:35:14 INFO  org.springframework.boot.StartupInfoLogger                                       Started JustAGame in 5.128 seconds (JVM running for 5.812)
+2020-06-24 22:36:13 INFO  org.springframework.web.socket.config.WebSocketMessageBrokerStats                WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2020-06-24 22:36:41 INFO  org.apache.juli.logging.DirectJDKLog                                             Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-24 22:36:41 INFO  org.springframework.web.servlet.FrameworkServlet                                 Initializing Servlet 'dispatcherServlet'
+2020-06-24 22:36:41 INFO  org.springframework.web.servlet.FrameworkServlet                                 Completed initialization in 7 ms
+2020-06-24 22:36:41 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START index
+2020-06-24 22:36:41 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: index. Start at: 2020-06-24T22:36:41.554 Duration: 0s 1ms Value: null
+2020-06-24 22:36:41 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START boardPostRequest
+2020-06-24 22:36:41 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:36:41 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:36:41.770 Duration: 0s 2ms Value: null
+2020-06-24 22:36:41 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: boardPostRequest. Start at: 2020-06-24T22:36:41.768 Duration: 0s 4ms Value: null
+2020-06-24 22:36:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START startSession
+2020-06-24 22:36:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: startSession. Start at: 2020-06-24T22:36:42.106 Duration: 0s 1ms Value: null
+2020-06-24 22:36:50 ERROR org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: UserDetailsService returned null, which is an interface contract violation
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:110)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:141)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-06-24 22:36:50 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START boardPostRequest
+2020-06-24 22:36:50 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:36:50 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:36:50.620 Duration: 0s 0ms Value: null
+2020-06-24 22:36:50 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: boardPostRequest. Start at: 2020-06-24T22:36:50.619 Duration: 0s 2ms Value: null
+2020-06-24 22:36:50 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START startSession
+2020-06-24 22:36:50 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: startSession. Start at: 2020-06-24T22:36:50.770 Duration: 0s 0ms Value: null
+2020-06-24 22:36:54 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START boardPostRequest
+2020-06-24 22:36:54 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:36:54 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:36:54.798 Duration: 0s 0ms Value: null
+2020-06-24 22:36:54 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: boardPostRequest. Start at: 2020-06-24T22:36:54.797 Duration: 0s 1ms Value: null
+2020-06-24 22:36:54 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START startSession
+2020-06-24 22:36:54 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: startSession. Start at: 2020-06-24T22:36:54.943 Duration: 0s 0ms Value: null
+2020-06-24 22:37:03 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START boardPostRequest
+2020-06-24 22:37:03 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:37:03 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:37:03.978 Duration: 0s 0ms Value: null
+2020-06-24 22:37:03 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: boardPostRequest. Start at: 2020-06-24T22:37:03.977 Duration: 0s 1ms Value: null
+2020-06-24 22:37:04 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START startSession
+2020-06-24 22:37:04 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: startSession. Start at: 2020-06-24T22:37:04.112 Duration: 0s 0ms Value: null
+2020-06-24 22:37:10 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START index
+2020-06-24 22:37:10 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: index. Start at: 2020-06-24T22:37:10.319 Duration: 0s 0ms Value: null
+2020-06-24 22:37:10 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START boardPostRequest
+2020-06-24 22:37:10 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:37:10 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:37:10.468 Duration: 0s 0ms Value: null
+2020-06-24 22:37:10 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: boardPostRequest. Start at: 2020-06-24T22:37:10.468 Duration: 0s 1ms Value: null
+2020-06-24 22:37:10 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START startSession
+2020-06-24 22:37:10 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: startSession. Start at: 2020-06-24T22:37:10.593 Duration: 0s 11ms Value: null
+2020-06-24 22:37:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START startSession
+2020-06-24 22:37:13 INFO  com.mokhovav.justAGame.gamesQueues.GameQueueThread                               littleCircuitthread is running...
+2020-06-24 22:37:13 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: startSession. Start at: 2020-06-24T22:37:13.838 Duration: 0s 84ms Value: null
+2020-06-24 22:37:24 INFO  com.mokhovav.justAGame.gamesQueues.GameQueueThread                               add bot
+2020-06-24 22:37:24 INFO  com.mokhovav.justAGame.gamesQueues.GameQueueThread                               add bot
+2020-06-24 22:37:24 INFO  com.mokhovav.justAGame.gamesQueues.GameQueueThread                               add bot
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardFileData
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:24.873 Duration: 0s 0ms Value: null
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:24.874 Duration: 0s 0ms Value: null
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:24.874 Duration: 0s 0ms Value: null
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:24.874 Duration: 0s 0ms Value: null
+2020-06-24 22:37:24 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardFileData. Start at: 2020-06-24T22:37:24.871 Duration: 0s 4ms Value: null
+2020-06-24 22:37:25 INFO  com.mongodb.diagnostics.logging.SLF4JLogger                                      Opened connection [connectionId{localValue:2, serverValue:12}] to localhost:6546
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getBoardFromBoardFileData
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfFieldsFromFile
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfFieldsFromFile. Start at: 2020-06-24T22:37:25.237 Duration: 0s 0ms Value: null
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfLinksFromFile
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfLinksFromFile. Start at: 2020-06-24T22:37:25.238 Duration: 0s 0ms Value: null
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfItemsFromFile
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfItemsFromFile. Start at: 2020-06-24T22:37:25.238 Duration: 0s 0ms Value: null
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfDicesFromFile
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfDicesFromFile. Start at: 2020-06-24T22:37:25.238 Duration: 0s 0ms Value: null
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getBoardFromBoardFileData. Start at: 2020-06-24T22:37:25.237 Duration: 0s 2ms Value: null
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:37:25 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:37:25.239 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START handleGameQueueEvent
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: handleGameQueueEvent. Start at: 2020-06-24T22:37:38.353 Duration: 0s 47ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START handleGameQueueEvent
+2020-06-24 22:37:38 DEBUG com.mokhovav.justAGame.littleCircuit.Master                                      roll value = 4
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START makeAMove
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfFieldsFromFile
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfFieldsFromFile. Start at: 2020-06-24T22:37:38.410 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfLinksFromFile
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfLinksFromFile. Start at: 2020-06-24T22:37:38.410 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfItemsFromFile
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfItemsFromFile. Start at: 2020-06-24T22:37:38.411 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfDicesFromFile
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfDicesFromFile. Start at: 2020-06-24T22:37:38.411 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getLinkFromField
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getLinkFromField. Start at: 2020-06-24T22:37:38.412 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getLinkFromField
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getLinkFromField. Start at: 2020-06-24T22:37:38.412 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getLinkFromField
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getLinkFromField. Start at: 2020-06-24T22:37:38.412 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getLinkFromField
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getLinkFromField. Start at: 2020-06-24T22:37:38.412 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getLinkFromField
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getLinkFromField. Start at: 2020-06-24T22:37:38.413 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:38.413 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:38.413 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:38.414 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:38.414 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: makeAMove. Start at: 2020-06-24T22:37:38.410 Duration: 0s 4ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getBoardFromBoardFileData
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfFieldsFromFile
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfFieldsFromFile. Start at: 2020-06-24T22:37:38.415 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfLinksFromFile
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfLinksFromFile. Start at: 2020-06-24T22:37:38.415 Duration: 0s 1ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfItemsFromFile
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfItemsFromFile. Start at: 2020-06-24T22:37:38.416 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfDicesFromFile
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfDicesFromFile. Start at: 2020-06-24T22:37:38.416 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getBoardFromBoardFileData. Start at: 2020-06-24T22:37:38.415 Duration: 0s 2ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:37:38.417 Duration: 0s 0ms Value: null
+2020-06-24 22:37:38 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: handleGameQueueEvent. Start at: 2020-06-24T22:37:38.401 Duration: 0s 31ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START handleGameQueueEvent
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: handleGameQueueEvent. Start at: 2020-06-24T22:37:39.338 Duration: 0s 15ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START handleGameQueueEvent
+2020-06-24 22:37:39 DEBUG com.mokhovav.justAGame.littleCircuit.Master                                      roll value = 2
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START makeAMove
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfFieldsFromFile
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfFieldsFromFile. Start at: 2020-06-24T22:37:39.365 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfLinksFromFile
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfLinksFromFile. Start at: 2020-06-24T22:37:39.366 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfItemsFromFile
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfItemsFromFile. Start at: 2020-06-24T22:37:39.366 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfDicesFromFile
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfDicesFromFile. Start at: 2020-06-24T22:37:39.368 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getLinkFromField
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getLinkFromField. Start at: 2020-06-24T22:37:39.368 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getLinkFromField
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getLinkFromField. Start at: 2020-06-24T22:37:39.368 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getLinkFromField
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getLinkFromField. Start at: 2020-06-24T22:37:39.368 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:39.369 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:39.369 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:39.369 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToItemFileData
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToItemFileData. Start at: 2020-06-24T22:37:39.370 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: makeAMove. Start at: 2020-06-24T22:37:39.365 Duration: 0s 5ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getBoardFromBoardFileData
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfFieldsFromFile
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfFieldsFromFile. Start at: 2020-06-24T22:37:39.370 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfLinksFromFile
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfLinksFromFile. Start at: 2020-06-24T22:37:39.371 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfItemsFromFile
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfItemsFromFile. Start at: 2020-06-24T22:37:39.371 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfDicesFromFile
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfDicesFromFile. Start at: 2020-06-24T22:37:39.372 Duration: 0s 0ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getBoardFromBoardFileData. Start at: 2020-06-24T22:37:39.370 Duration: 0s 2ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:37:39.372 Duration: 0s 1ms Value: null
+2020-06-24 22:37:39 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: handleGameQueueEvent. Start at: 2020-06-24T22:37:39.354 Duration: 0s 27ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START index
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: index. Start at: 2020-06-24T22:37:42.063 Duration: 0s 0ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START boardPostRequest
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:37:42.184 Duration: 0s 0ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: boardPostRequest. Start at: 2020-06-24T22:37:42.184 Duration: 0s 0ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START startSession
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: startSession. Start at: 2020-06-24T22:37:42.328 Duration: 0s 18ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getBoardFromBoardFileData
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfFieldsFromFile
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfFieldsFromFile. Start at: 2020-06-24T22:37:42.446 Duration: 0s 0ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfLinksFromFile
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfLinksFromFile. Start at: 2020-06-24T22:37:42.446 Duration: 0s 0ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfItemsFromFile
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfItemsFromFile. Start at: 2020-06-24T22:37:42.447 Duration: 0s 0ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START getListOfDicesFromFile
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getListOfDicesFromFile. Start at: 2020-06-24T22:37:42.447 Duration: 0s 0ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: getBoardFromBoardFileData. Start at: 2020-06-24T22:37:42.446 Duration: 0s 1ms Value: null
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 START convertToBoardDrawData
+2020-06-24 22:37:42 DEBUG com.mokhovav.base_spring_boot_project.injectors.TrackingInjector                 STOP: convertToBoardDrawData. Start at: 2020-06-24T22:37:42.447 Duration: 0s 0ms Value: null
+2020-06-24 22:40:13 INFO  org.springframework.core.log.CompositeLog                                        Stopping...
+2020-06-24 22:40:13 INFO  org.springframework.core.log.CompositeLog                                        BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-06-24 22:40:13 INFO  org.springframework.core.log.CompositeLog                                        Stopped.
+2020-06-24 22:40:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'brokerChannelExecutor'
+2020-06-24 22:40:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-06-24 22:40:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-06-24 22:40:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-06-24 22:40:13 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport           Shutting down ExecutorService 'defaultSockJsTaskScheduler'
+2020-06-24 22:40:13 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:6543/authentication]

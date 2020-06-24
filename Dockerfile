@@ -38,8 +38,13 @@ RUN chmod -R 777 ./
 # RUN sleep 100000
 RUN ./mainproject/gradlew --build-cache --no-daemon
 
+
 # copy all sources and build the project
 COPY ./ ./mainproject
+
+# copy hibernate.xml from production
+COPY ./src/main/resources/production/ ./mainproject/src/main/resources/
+
 COPY --from=gitImage /home/gitProjects/ ./
 # copy hibernate.xml from production
 #COPY ./src/main/resources/production/ ./src/main/resources/
@@ -50,6 +55,8 @@ RUN chmod -R 777 ./
 
 WORKDIR /home/gradle/projects/mainproject
 # RUN sleep 1000000
+
+
 RUN ./gradlew --build-cache --no-daemon build
 ###################################################################################################
 
