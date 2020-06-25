@@ -62,7 +62,7 @@ function onWebMessage(text) {
             break;
         case "startSession":
             sessionId = gameMessage.message;
-            socket = new Base.Socket('http://localhost:8080/gameMessageHandler', onopen, onSocketMessage, onerror, onclose);
+            socket = new Base.Socket('http://78.47.167.60/gameMessageHandler', onopen, onSocketMessage, onerror, onclose);
             if (socket.connect() != true) showMessage("Socket connection error");
             break;
         case "info":

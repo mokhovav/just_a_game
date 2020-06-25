@@ -8,7 +8,7 @@ version: '3.1'
 # The section in which services will be described begins with 'services'.
 services:
   spring:
-    image: mokhovav/just_a_game
+    image: mokhovav/just_a_game:0.1
     restart: always
     container_name: just_a_game_project
     ports:
