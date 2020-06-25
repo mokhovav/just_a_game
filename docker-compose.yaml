@@ -8,11 +8,11 @@ version: '3.1'
 # The section in which services will be described begins with 'services'.
 services:
   spring:
-    image: mokhovav/just_a_game:0.1
+    image: mokhovav/just_a_game
     restart: always
     container_name: just_a_game_project
     ports:
-       - 80:8080
+      - 80:8080
 
   db:
     image: postgres
@@ -21,11 +21,8 @@ services:
       POSTGRES_USER: just_a_game_user
       POSTGRES_PASSWORD: just_a_game_pwd
       POSTGRES_DB: authentication
-    container_name: just_a_game
     ports:
       - 6543:5432
-    #volumes:
-    #  - ./data/postgres:/var/lib/postgresql/data
 
   mongodb:
     image: mongo
@@ -36,6 +33,12 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: toor
     ports:
       - 6546:27017
+  adminer:
+    image: adminer
+    restart: always
+    container_name: adminer
+    ports:
+      - 6544:8080
 
 #  mongo-express:
 #    image: mongo-express
@@ -47,9 +50,3 @@ services:
 #      ME_CONFIG_MONGODB_ADMINUSERNAME: root
 #      ME_CONFIG_MONGODB_ADMINPASSWORD: toor
 
-#  adminer:
-#    image: adminer
-#    restart: always
-#    container_name: adminer
-#    ports:
-#      - 6544:8080

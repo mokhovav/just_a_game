@@ -24,7 +24,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 public class MongoConfig extends AbstractMongoClientConfiguration  {
 
     //@Value("mongodb://root:toor@localhost:6546")
-    @Value("mongodb://root:toor@mongodbdock:6546")
+    @Value("mongodb://root:toor@mongodb:27017")
     private String connectionString;
 
 

@@ -8,7 +8,7 @@
         <!-- Database connection settings -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://db:6543/authentication</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://db:5432/authentication</property>
         <property name="hibernate.connection.username">just_a_game_user</property>
         <property name="hibernate.connection.password">just_a_game_pwd</property>
         <!-- Echo all executed SQL to stdout -->
